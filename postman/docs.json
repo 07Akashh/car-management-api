@@ -1,0 +1,728 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"_postman_id": "0060962f-b706-45a6-8b6f-3c78a666f560",
+		"name": "Car Management Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37344372"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/user",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "User Fetched Successfully",
+							"data": {
+								"_id": "6737473b2eecc3ecee269b82",
+								"firstName": "user",
+								"lastName": "One",
+								"userName": "user2",
+								"email": "user2@gmail.com",
+								"number": 1234149003,
+								"password": "$2a$10$GCgjBmo0VpFmWE2CV6z00.eZCOE91/itXOlIweOkAP3vuGeX.IXgW",
+								"createdAt": "2024-11-15T13:06:03.046Z",
+								"updatedAt": "2024-11-15T13:06:03.046Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"firstName\": \"user\",\n    // \"lastName\": \"One\",\n    // \"userName\": \"user2\",\n    // \"number\": 1234149003,\n    \"email\": \"user2@gmail.com\",\n    \"password\" : \"User1@gmail\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/user/login",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "User logged in successfully",
+							"data": {
+								"_id": "6737473b2eecc3ecee269b82",
+								"firstName": "user",
+								"lastName": "One",
+								"userName": "user2",
+								"email": "user2@gmail.com",
+								"number": 1234149003,
+								"password": "$2a$10$GCgjBmo0VpFmWE2CV6z00.eZCOE91/itXOlIweOkAP3vuGeX.IXgW",
+								"createdAt": "2024-11-15T13:06:03.046Z",
+								"updatedAt": "2024-11-15T13:06:03.046Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"user\",\n    \"lastName\": \"Onedsd\",\n    \"userName\": \"user242087\",\n    \"number\": 1234149009,\n    \"email\": \"user08492@gmail.com\",\n    \"password\" : \"User1@gmail\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/user/register",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "User Created Successfully",
+							"data": {
+								"firstName": "user",
+								"lastName": "Onedsd",
+								"userName": "user242087",
+								"email": "user08492@gmail.com",
+								"number": 1234149009,
+								"password": "$2a$10$bIRlWcX1/PSUl571QHUHsOW6vsJGh2NoWPVgm4NjhVO9zVFnmIJoq",
+								"_id": "6739a27a43844322249096dc",
+								"createdAt": "2024-11-17T07:59:54.737Z",
+								"updatedAt": "2024-11-17T07:59:54.737Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/user/logout",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "User logged out successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Get Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/car",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Car list fetched successfully",
+							"data": [
+								{
+									"_id": "673871dfbfde1c558192c6d5",
+									"title": "Toyota Camry D3",
+									"description": "A reliable sedan with a smooth ride and fuel efficiency .",
+									"tags": "Toyota Camry, sedan, vehiclesss",
+									"company": "Toyota",
+									"dealer": 123456,
+									"price": 32000,
+									"year": 2019,
+									"mileage": 45000,
+									"color": "White",
+									"transmission": "Automatic",
+									"fuelType": "Hybrid",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676915/car_images/ues3a8be73sfuiyll9e8.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/yjsi5sf1tddbwcp5jzva.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/lmsr14e7ax74jeudvdjy.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/ao7rarbqjvhycsmbtz6h.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/jvbgkodfspvibhtgkjjh.jpg"
+									],
+									"createdAt": "2024-11-16T10:20:15.497Z",
+									"updatedAt": "2024-11-17T08:05:07.690Z",
+									"__v": 0
+								},
+								{
+									"_id": "673872f4bfde1c558192c6df",
+									"title": "Chevrolet Corvette C8",
+									"description": "A mid-engine sports car with sleek design and powerful performance.",
+									"tags": "Chevrolet Corvette, sports car",
+									"company": "Chevrolet",
+									"dealer": 101112,
+									"price": 85000,
+									"year": 2021,
+									"mileage": 12000,
+									"color": "Yellow",
+									"transmission": "Automatic",
+									"fuelType": "Petrol",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/lzxr7aij6tzaqqdchprn.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/uv9f5bbbqzavs0nnpany.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/yhnzb0gaiinc6pjod0eh.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752610/car_images/bkbzm9j0wm7en2zie3uy.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731785402/car_images/uvuyrgvhumajil6x0h1c.webp"
+									],
+									"createdAt": "2024-11-16T10:24:52.210Z",
+									"updatedAt": "2024-11-16T19:30:02.846Z",
+									"__v": 0
+								},
+								{
+									"_id": "6738f58ee2ab4251bacb4292",
+									"title": "Lamborghini Urus",
+									"description": "The Lamborghini Urus is a high-performance luxury SUV that combines the best of supercar performance with the practicality of an SUV. With a V8 twin-turbo engine, the Urus can reach speeds of over 190 mph and accelerate from 0 to 60 mph in just 3.1 seconds.",
+									"tags": "Lamborghini, SUV, Luxury, Performance, 4x4",
+									"company": "Lamborghini",
+									"dealer": 218000,
+									"price": 218000,
+									"year": 2023,
+									"mileage": 1000,
+									"color": "Nero Noctis (Black)",
+									"transmission": "Automatic",
+									"fuelType": "Petrol",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/azjdh5oljxq8999phzga.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/hpsnig1ejaua0mggp35k.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786125/car_images/kvgde19vg2c6qh320lht.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/raddygzmqhmb4jlw9eiv.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/zsvebhbffnucn8vfmkmv.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/ja0deotw9ofd4xt12rf7.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824133/car_images/dupwozwzrsjrfp7vw8um.jpg"
+									],
+									"createdAt": "2024-11-16T19:42:06.902Z",
+									"updatedAt": "2024-11-17T06:15:35.502Z",
+									"__v": 0
+								},
+								{
+									"_id": "67398c93777bac42188d326b",
+									"title": "Ferrari 488 GTB",
+									"description": "A high-performance sports car with stunning acceleration and sleek design.",
+									"tags": "Ferrari 488 GTB, sports car, luxury, performance",
+									"company": "Ferrari",
+									"dealer": 789012,
+									"price": 250000,
+									"year": 2021,
+									"mileage": 12000,
+									"color": "Red",
+									"transmission": "Automatic",
+									"fuelType": "Gasoline",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/fyw5snh17oqpoo860b91.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/hahmyzqsfff96mhnn0px.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/ryclcwqlgaf6ukpxzuu8.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/jzcjgoxsjvthsbz6qpum.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/gybke3oewps2i2noxknd.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824786/car_images/iiijiq2tqgxezx0awlxd.jpg"
+									],
+									"createdAt": "2024-11-17T06:26:27.859Z",
+									"updatedAt": "2024-11-17T06:26:27.859Z",
+									"__v": 0
+								},
+								{
+									"_id": "67398e09777bac42188d332b",
+									"title": "Ferrari 488 GTB",
+									"description": "A high-performance sports car with stunning acceleration and sleek design.",
+									"tags": "Ferrari 488 GTB, sports car, luxury, performance",
+									"company": "Ferrari",
+									"dealer": 789012,
+									"price": 250000,
+									"year": 2017,
+									"mileage": 12000,
+									"color": "Red",
+									"transmission": "Automatic",
+									"fuelType": "Gasoline",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731825159/car_images/ldd2mj4jaqqfpxa7eg2q.jpg"
+									],
+									"createdAt": "2024-11-17T06:32:41.377Z",
+									"updatedAt": "2024-11-17T06:32:41.377Z",
+									"__v": 0
+								},
+								{
+									"_id": "67398fc4777bac42188d3337",
+									"title": "Ferrari 488 GTB",
+									"description": "A high-performance sports car with stunning acceleration and sleek design.",
+									"tags": "Ferrari 488 GTB, sports car, luxury, performance",
+									"company": "Ferrari",
+									"dealer": 789012,
+									"price": 250000,
+									"year": 2021,
+									"mileage": 12000,
+									"color": "Red",
+									"transmission": "Automatic",
+									"fuelType": "Gasoline",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731825603/car_images/kpcy2mv9mrxcpw0z6f5y.jpg"
+									],
+									"createdAt": "2024-11-17T06:40:04.355Z",
+									"updatedAt": "2024-11-17T06:40:04.355Z",
+									"__v": 0
+								},
+								{
+									"_id": "67399034777bac42188d3339",
+									"title": "Ferrari 488 GTB",
+									"description": "A high-performance sports car with stunning acceleration and sleek design.",
+									"tags": "Ferrari 488 GTB, sports car, luxury, performance",
+									"company": "Ferrari",
+									"dealer": 789012,
+									"price": 250000,
+									"year": 2021,
+									"mileage": 12000,
+									"color": "Red",
+									"transmission": "Automatic",
+									"fuelType": "Gasoline",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731825610/car_images/fjm2eqfbwslyjol2huik.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731825715/car_images/aybmeqwax15v1gkx658b.jpg"
+									],
+									"createdAt": "2024-11-17T06:41:56.600Z",
+									"updatedAt": "2024-11-17T06:41:56.600Z",
+									"__v": 0
+								},
+								{
+									"_id": "6739a3a643844322249096e8",
+									"title": "Chevrolet Corvette C8",
+									"description": "A mid-engine sports car with sleek design and powerful performance.",
+									"tags": "Chevrolet Corvette, sports car",
+									"company": "Chevrolet",
+									"dealer": 101112,
+									"price": 85000,
+									"year": 2021,
+									"mileage": 12000,
+									"color": "Yellow",
+									"transmission": "Automatic",
+									"fuelType": "Petrol",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/lzxr7aij6tzaqqdchprn.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/uv9f5bbbqzavs0nnpany.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/yhnzb0gaiinc6pjod0eh.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752610/car_images/bkbzm9j0wm7en2zie3uy.jpg"
+									],
+									"createdAt": "2024-11-17T08:04:54.340Z",
+									"updatedAt": "2024-11-17T08:04:54.340Z",
+									"__v": 0
+								}
+							],
+							"pagination": {
+								"currentPage": 1,
+								"totalPages": 1,
+								"totalCars": 8,
+								"limit": 12
+							}
+						}
+					]
+				},
+				{
+					"name": "Get Car By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/car/673871dfbfde1c558192c6d5",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car",
+								"673871dfbfde1c558192c6d5"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Car Fetched Successfully",
+							"data": {
+								"_id": "673871dfbfde1c558192c6d5",
+								"title": "Toyota Camry D3",
+								"description": "A reliable sedan with a smooth ride and fuel efficiency .",
+								"tags": "Toyota Camry, sedan, vehiclesss",
+								"company": "Toyota",
+								"dealer": 123456,
+								"price": 32000,
+								"year": 2019,
+								"mileage": 45000,
+								"color": "White",
+								"transmission": "Automatic",
+								"fuelType": "Hybrid",
+								"owner": {
+									"_id": "6737473b2eecc3ecee269b82",
+									"firstName": "user",
+									"lastName": "One",
+									"email": "user2@gmail.com"
+								},
+								"images": [
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676915/car_images/ues3a8be73sfuiyll9e8.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/yjsi5sf1tddbwcp5jzva.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/lmsr14e7ax74jeudvdjy.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/ao7rarbqjvhycsmbtz6h.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/jvbgkodfspvibhtgkjjh.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731785161/car_images/mwfqxerntqd59o1hkmio.webp"
+								],
+								"createdAt": "2024-11-16T10:20:15.497Z",
+								"updatedAt": "2024-11-16T19:26:02.502Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "Add Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"Chevrolet Corvette C8\",\n        \"description\": \"A mid-engine sports car with sleek design and powerful performance.\",\n        \"tags\": \"Chevrolet Corvette, sports car\",\n        \"company\": \"Chevrolet\",\n        \"dealer\": 101112,\n        \"price\": 85000,\n        \"year\": 2021,\n        \"mileage\": 12000,\n        \"color\": \"Yellow\",\n        \"transmission\": \"Automatic\",\n        \"fuelType\": \"Petrol\",\n        \"images\": [\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/lzxr7aij6tzaqqdchprn.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/uv9f5bbbqzavs0nnpany.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/yhnzb0gaiinc6pjod0eh.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752610/car_images/bkbzm9j0wm7en2zie3uy.jpg\"\n    ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/car",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Car Added Successfully",
+							"data": {
+								"title": "Chevrolet Corvette C8",
+								"description": "A mid-engine sports car with sleek design and powerful performance.",
+								"tags": "Chevrolet Corvette, sports car",
+								"company": "Chevrolet",
+								"dealer": 101112,
+								"price": 85000,
+								"year": 2021,
+								"mileage": 12000,
+								"color": "Yellow",
+								"transmission": "Automatic",
+								"fuelType": "Petrol",
+								"owner": "6737473b2eecc3ecee269b82",
+								"images": [
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/lzxr7aij6tzaqqdchprn.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/uv9f5bbbqzavs0nnpany.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/yhnzb0gaiinc6pjod0eh.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752610/car_images/bkbzm9j0wm7en2zie3uy.jpg"
+								],
+								"_id": "6739a3a643844322249096e8",
+								"createdAt": "2024-11-17T08:04:54.340Z",
+								"updatedAt": "2024-11-17T08:04:54.340Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "Update Car By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Toyota Camry D3\",\n    \"description\": \"A reliable sedan with a smooth ride and fuel efficiency .\",\n    \"tags\": \"Toyota Camry, sedan, vehiclesss\",\n    \"images\": [\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676915/car_images/ues3a8be73sfuiyll9e8.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/yjsi5sf1tddbwcp5jzva.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/lmsr14e7ax74jeudvdjy.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/ao7rarbqjvhycsmbtz6h.jpg\",\n        \"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/jvbgkodfspvibhtgkjjh.jpg\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/car/673871dfbfde1c558192c6d5",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car",
+								"673871dfbfde1c558192c6d5"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Car Updated Successfully",
+							"data": {
+								"_id": "673871dfbfde1c558192c6d5",
+								"title": "Toyota Camry D3",
+								"description": "A reliable sedan with a smooth ride and fuel efficiency .",
+								"tags": "Toyota Camry, sedan, vehiclesss",
+								"company": "Toyota",
+								"dealer": 123456,
+								"price": 32000,
+								"year": 2019,
+								"mileage": 45000,
+								"color": "White",
+								"transmission": "Automatic",
+								"fuelType": "Hybrid",
+								"owner": "6737473b2eecc3ecee269b82",
+								"images": [
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676915/car_images/ues3a8be73sfuiyll9e8.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/yjsi5sf1tddbwcp5jzva.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/lmsr14e7ax74jeudvdjy.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/ao7rarbqjvhycsmbtz6h.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731676917/car_images/jvbgkodfspvibhtgkjjh.jpg"
+								],
+								"createdAt": "2024-11-16T10:20:15.497Z",
+								"updatedAt": "2024-11-17T08:08:23.392Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "Upload Image Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/Users/rahul/Downloads/_.jpeg",
+										"/Users/rahul/Downloads/New Corvette Grand Sport To Bridge The Z06 Gap.jpeg",
+										"/Users/rahul/Downloads/f1bc436f-40c4-4bf2-9df5-7da4e793ceb1.jpeg",
+										"/Users/rahul/Downloads/Chevrolet.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiUrl}}/images/upload",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"images",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"success": true,
+							"message": "Images uploaded successfully",
+							"images": [
+								"https://res.cloudinary.com/dmao0koo4/image/upload/v1731830781/car_images/gurrobfgvbmguecwv71s.jpg"
+							]
+						}
+					]
+				},
+				{
+					"name": "Delete Car By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/car/6739a3a643844322249096e8",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car",
+								"6739a3a643844322249096e8"
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Car Deleted Successfully",
+							"data": {
+								"_id": "6739a3a643844322249096e8",
+								"title": "Chevrolet Corvette C8",
+								"description": "A mid-engine sports car with sleek design and powerful performance.",
+								"tags": "Chevrolet Corvette, sports car",
+								"company": "Chevrolet",
+								"dealer": 101112,
+								"price": 85000,
+								"year": 2021,
+								"mileage": 12000,
+								"color": "Yellow",
+								"transmission": "Automatic",
+								"fuelType": "Petrol",
+								"owner": "6737473b2eecc3ecee269b82",
+								"images": [
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/lzxr7aij6tzaqqdchprn.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/uv9f5bbbqzavs0nnpany.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752609/car_images/yhnzb0gaiinc6pjod0eh.jpg",
+									"https://res.cloudinary.com/dmao0koo4/image/upload/v1731752610/car_images/bkbzm9j0wm7en2zie3uy.jpg"
+								],
+								"createdAt": "2024-11-17T08:04:54.340Z",
+								"updatedAt": "2024-11-17T08:04:54.340Z",
+								"__v": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "Search Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/car/search?query=Lambo",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"car",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Lambo"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"Success": true,
+							"message": "Search Cars Result",
+							"data": [
+								{
+									"_id": "6738f58ee2ab4251bacb4292",
+									"title": "Lamborghini Urus",
+									"description": "The Lamborghini Urus is a high-performance luxury SUV that combines the best of supercar performance with the practicality of an SUV. With a V8 twin-turbo engine, the Urus can reach speeds of over 190 mph and accelerate from 0 to 60 mph in just 3.1 seconds.",
+									"tags": "Lamborghini, SUV, Luxury, Performance, 4x4",
+									"company": "Lamborghini",
+									"dealer": 218000,
+									"price": 218000,
+									"year": 2023,
+									"mileage": 1000,
+									"color": "Nero Noctis (Black)",
+									"transmission": "Automatic",
+									"fuelType": "Petrol",
+									"owner": "6737473b2eecc3ecee269b82",
+									"images": [
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/azjdh5oljxq8999phzga.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/hpsnig1ejaua0mggp35k.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786125/car_images/kvgde19vg2c6qh320lht.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/raddygzmqhmb4jlw9eiv.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/zsvebhbffnucn8vfmkmv.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731786126/car_images/ja0deotw9ofd4xt12rf7.jpg",
+										"https://res.cloudinary.com/dmao0koo4/image/upload/v1731824133/car_images/dupwozwzrsjrfp7vw8um.jpg"
+									],
+									"createdAt": "2024-11-16T19:42:06.902Z",
+									"updatedAt": "2024-11-17T06:15:35.502Z",
+									"__v": 0
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "https://car-management-api-u93r.onrender.com/api",
+			"type": "string"
+		}
+	]
+}
