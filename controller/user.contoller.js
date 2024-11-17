@@ -27,7 +27,8 @@ exports.createUser = async (req, res) => {
         res.cookie('authToken', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            maxAge: 3600000
+            maxAge: 3600000,
+            sameSite: 'None'
         });
         return res.status(200).send({
             Success: true,
@@ -83,7 +84,8 @@ exports.loginUser = async (req, res) => {
         res.cookie('authToken', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            maxAge: 3600000
+            maxAge: 3600000,
+            sameSite: 'None'
         });
 
         return res.status(200).send({
