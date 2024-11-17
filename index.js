@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 const uri = process.env.MONGO_URI
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://carmanagementapp.netlify.app'],
+    origin: ['http://localhost:3000', 'https://carmanagementapp.netlify.app', 'https://car-management-app-theta.vercel.app'],
     credentials: true,
 }));
 app.use(express.json());
